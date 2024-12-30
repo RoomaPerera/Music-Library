@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row my-5">
             <div class="col-md-3">
-                <div class="card border-0 shadow-lg">
+                <div class="card">
                     <div class="card-header  text-white">
-                        Welcome!  {{ Auth::user()->name }}
+                        {{ Auth::user()->name }}
                     </div>
                     <div class="card-body">
                         <div class="text-center mb-3">
@@ -16,12 +16,7 @@
                             @endif
 
                         </div>
-                        <div class="h5 text-center">
-                            <strong>{{ Auth::user()->name }}</strong>
-                        </div>
                     </div>
-                </div>
-                <div class="card border-0 shadow-lg mt-3">
                     <div class="card-body sidebar">
                         @include('layouts.sidebar')
                     </div>
@@ -29,7 +24,7 @@
             </div>
             <div class="col-md-9">
                 @include('layouts.message')
-                <div class="card border-0 shadow">
+                <div class="card">
                     <div class="card-header  text-white">
                         Profile
                     </div>
@@ -61,10 +56,6 @@
                                 @error('image')
                                     <p class="invalid-feedback">{{ $message }}</p>
                                 @enderror
-                                @if (Auth::user()->image != '')
-                                    <img src="{{ asset('uploads/profile/' . Auth::user()->image) }}" class="img-fluid mt-4"
-                                        alt="{{ Auth::user()->name }}" width="200px" height="150">
-                                @endif
                             </div>
                             <button class="btn btn-primary mt-2">Update</button>
                         </form>

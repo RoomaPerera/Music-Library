@@ -2,22 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --blue: #1e90ff;
+    --blue: #1DB954;
     --white: #ffffff;
-    --btn-bg-primary: #3a92f7;
-    --btn-border-primary: #3a92f7;
+    --btn-bg-primary: #1DB954;
+    --btn-border-primary: #1DB954;
     --btn-font-family: "Montserrat", sans-serif;
     --body-font-family: "Lato", sans-serif;
     --btn-bg-dark: #000;
-    --star-raing-color: #3a92f7;
+    --star-raing-color: #1DB954;
 }
 
 body{
-    font-family: var(--body-font-family);
+    font-family: cursive;
+    background-color: #191414;
 }
 
 .header{
-    background-color: var(--btn-bg-primary);
+    /*background-color: var(--btn-bg-primary);*/
+    background-color: #1DB954;
 }
 
 .star-rating {
@@ -78,11 +80,11 @@ body{
 .sidebar .nav li a{
     text-decoration: none;
     font-size: 18px;
-    color: var(--btn-bg-dark);
+    color: #2b0000;
 }
 
 .sidebar .nav li{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #000000;
     padding: 10px 0;
 }
 

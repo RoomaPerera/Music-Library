@@ -6,7 +6,7 @@
             <div class="col-md-3">
                 <div class="card border-0 shadow-lg">
                     <div class="card-header  text-white">
-                        Welcome!  {{ Auth::user()->name }}
+                        {{ Auth::user()->name }}
                     </div>
                     <div class="card-body">
                         <div class="text-center mb-3">
@@ -16,12 +16,7 @@
                             @endif
 
                         </div>
-                        <div class="h5 text-center">
-                            <strong>{{ Auth::user()->name }}</strong>
-                        </div>
                     </div>
-                </div>
-                <div class="card border-0 shadow-lg mt-3">
                     <div class="card-body sidebar">
                         @include('layouts.sidebar')
                     </div>

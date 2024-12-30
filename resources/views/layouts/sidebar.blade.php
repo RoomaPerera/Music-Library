@@ -1,13 +1,13 @@
 <ul class="nav flex-column">
     <li class="nav-item">
-        <a href="profile.html">Profile</a>
+        <a href="{{route('account.profile')}}">Profile</a>
     </li>
     @if (Auth::user()->role == 'artist')
         <li class="nav-item">
             <a href="{{route('songs.index')}}">Songs</a>
         </li>
         <li class="nav-item">
-            <a href="">Comments</a>
+            <a href="{{route('comments.index')}}">Comments</a>
         </li>
     @endif
     @if (Auth::user()->role == 'listener')

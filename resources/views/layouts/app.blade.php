@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
-<body class="bg-light">
+<body>
     <div class="container-fluid shadow-lg header">
         <div class="container">
             <div class="d-flex justify-content-between">
@@ -18,7 +18,7 @@
                         Library</a></h1>
                 <div class="d-flex align-items-center navigation">
                     @if (Auth::check())
-                        <a href="{{ route('account.profile') }}" class="text-white">My Account</a>
+                        <a href="{{ route('account.profile') }}" class="text-white">Account</a>
                     @else
                         <a href="{{ route('account.login') }}" class="text-white">Log In</a>
                         <a href="{{ route('account.register') }}" class="text-white ps-2">Sign Up</a>
