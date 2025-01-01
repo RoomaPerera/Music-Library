@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --blue: #1DB954;
+    --blue: #ccc;
     --white: #ffffff;
-    --btn-bg-primary: #1DB954;
+    --btn-bg-primary: #ffffff;
     --btn-border-primary: #1DB954;
     --btn-font-family: "Montserrat", sans-serif;
     --body-font-family: "Lato", sans-serif;
@@ -12,59 +12,39 @@
     --star-raing-color: #1DB954;
 }
 
-body{
+body {
     font-family: cursive;
     background-color: #191414;
 }
 
-.header{
-    /*background-color: var(--btn-bg-primary);*/
-    background-color: #1DB954;
-}
-
-.star-rating {
-    display: flex;
-    align-items: center;
-    font-size: 1em;
-    justify-content: flex-start
-}
-
-.back-stars {
-    display: flex;
-    color: #ccc;
-    position: relative
-}
-
-.front-stars {
-    display: flex;
-    color: var(--star-raing-color);
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    transition: all .5s
+.header {
+    background-color: #111;
 }
 
 .percent {
     color: #bb5252;
     font-size: 1.5em
 }
-.btn-primary{
+
+.btn-primary {
     font-family: var(--btn-font-family);
-    background-color: var(--btn-bg-primary);
-    border-color: var(--btn-border-primary);
-}
-.btn-primary:hover{
-    background-color: var(--btn-bg-dark);
-    border-color: var(--btn-bg-dark);
+    background-color: black;
+    border-color: black;
 }
 
-.heading{
+.btn-primary:hover {
+    background-color: var(--btn-bg-primary);
+    border-color: var(--btn-bg-primary);
+    color: black;
+}
+
+.heading {
     font-size: 18px;
     font-family: var(--body-font-family);
     font-weight: 700;
 }
 
-.heading a{
+.heading a {
     font-size: 18px;
     font-family: var(--body-font-family);
     font-weight: 700;
@@ -72,40 +52,159 @@ body{
     text-decoration: none;
 }
 
-.navigation a{
+.navigation a {
     font-size: 20px;
     text-decoration: none;
 }
 
-.sidebar .nav li a{
+.sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+.sidebar .nav li a {
     text-decoration: none;
     font-size: 18px;
     color: #2b0000;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
-.sidebar .nav li{
-    border-bottom: 1px solid #000000;
+.sidebar .nav li {
+    border-bottom: none;
+    width: 100%;
     padding: 10px 0;
+    position: relative;
 }
 
-.sidebar .nav li:last-child{
+.sidebar .nav li::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 1px;
+
+    background-color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+.sidebar .nav li:last-child {
     border-bottom: none;
 }
 
-.card-header{
+.card-header {
     background-color: var(--btn-bg-primary);
     font-size: 18px;
 }
+
 .sidebar .nav li form button {
     all: unset;
     color: var(--btn-bg-dark);
     cursor: pointer;
     font-size: 18px;
     text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
-.content{
+.content {
     font-size: 16px;
     font-family: var(--btn-font-family);
     font-weight: 500;
+}
+
+.custom-card-style {
+    background-color: #222 !important;
+    color: #fff;
+}
+
+.form-label {
+    color: rgb(255, 255, 255);
+}
+
+.form-label-01 {
+    color: rgb(0, 0, 0);
+}
+
+.bordered-link {
+    padding: 5px 15px !important;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bordered-link:hover {
+    background-color: #fff;
+    color: #111 !important;
+    border-color: #111;
+}
+
+.hr-color {
+    border: none;
+    height: 5px;
+    background-color: #888;
+    color: #888;
+    margin: 0;
+}
+
+.card {
+    background-color: #222 !important;
+    color: white !important;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #333 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.card-body {
+    color: white !important;
+}
+
+.nav.flex-column {
+    color: white !important;
+}
+
+.nav.flex-column a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.nav.flex-column a:hover {
+    color: var(--blue) !important;
+}
+
+.nav.flex-column button {
+    all: unset;
+    color: white !important;
+    cursor: pointer;
+}
+
+.nav.flex-column button:hover {
+    color: var(--blue) !important;
+}
+
+.text-center.text-white {
+    font-size: 18px;
+    font-family: cursive;
+    font-weight: 400;
+}
+
+.sidebar-hr {
+    border: none;
+    height: 2px;
+    background-color: #fff !important;
+    margin-bottom: 0;
 }

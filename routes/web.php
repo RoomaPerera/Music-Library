@@ -2,12 +2,10 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SongsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::group(['prefix' => 'account'],function(){
     Route::group(['middleware' => 'guest'], function(){
@@ -28,6 +26,7 @@ Route::group(['prefix' => 'account'],function(){
         Route::delete('songs/{id}', [SongsController::class, 'delete'])->name('songs.delete');
         Route::put('/songs/{id}', [SongsController::class, 'update'])->name('songs.update');
         Route::get( '/comments',[CommentsController::class,'index'])->name('comments.index');
+        Route::get( '/',[HomeController::class,'index'])->name('home');
     });
     
 });

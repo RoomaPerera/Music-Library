@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5">
-                    <div class="card border border-light-subtle rounded-4">
+                    <div class="card custom-card-style border border-light-subtle rounded-4">
                         <div class="card-body p-3 p-md-4 p-xl-5">
                             <div class="row">
                                 <div class="col-12">
@@ -22,7 +22,7 @@
                                             <input type="text" value="{{ old('name') }}"
                                                 class="form-control @error('name') is-invalid @enderror" name="name"
                                                 id="name" placeholder="Name">
-                                            <label for="text" class="form-label">Name</label>
+                                            <label for="text" class="form-label-01">Name</label>
                                             @error('name')
                                                 <p class="invalid-feedback"{{ $message }}></p>
                                             @enderror
@@ -33,7 +33,7 @@
                                             <input type="text" value="{{ old('email') }}"
                                                 class="form-control @error('email') is-invalid @enderror" name="email"
                                                 id="email" placeholder="name@example.com">
-                                            <label for="text" class="form-label">Email</label>
+                                            <label for="text" class="form-label-01">Email</label>
                                             @error('email')
                                                 <p class="invalid-feedback"{{ $message }}></p>
                                             @enderror
@@ -44,7 +44,7 @@
                                             <input type="password"
                                                 class="form-control @error('password') is-invalid @enderror" name="password"
                                                 id="password" value="" placeholder="Password">
-                                            <label for="password" class="form-label">Password</label>
+                                            <label for="password" class="form-label-01">Password</label>
                                             @error('password')
                                                 <p class="invalid-feedback"{{ $message }}></p>
                                             @enderror
@@ -56,7 +56,7 @@
                                                 class="form-control @error('password_confirmation') is-invalid @enderror"
                                                 name="password_confirmation" id="password_confirmation" value=""
                                                 placeholder="Confirm Password">
-                                            <label for="password" class="form-label">Confirm Password</label>
+                                            <label for="password" class="form-label-01">Confirm Password</label>
                                             @error('password_confirmation')
                                                 <p class="invalid-feedback"{{ $message }}></p>
                                             @enderror
