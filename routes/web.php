@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SongsController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [AccountController::class, 'login'])->name('account.login');
 
 Route::group(['prefix' => 'account'],function(){
     Route::group(['middleware' => 'guest'], function(){
