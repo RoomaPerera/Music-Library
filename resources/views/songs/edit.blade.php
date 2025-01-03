@@ -83,7 +83,6 @@
                             <div class="mb-3">
                                 <label for="audio" class="form-label">Audio</label>
                                 <br>
-                                <!-- Check if song has an existing audio file -->
                                 @if ($song->audio)
                                     <audio id="audioPlayer" controls>
                                         <source src="{{ Storage::url($song->audio) }}" type="audio/mpeg">
@@ -100,16 +99,12 @@
                                 @else
                                     <p>No audio available for this song.</p>
                                 @endif
-
-                                <!-- Option to upload new audio -->
                                 <input type="file" class="form-control @error('audio') is-invalid @enderror"
                                     name="audio" id="audio">
 
                                 @error('audio')
                                     <p class="invalid-feedback">{{ $message }}</p>
                                 @enderror
-
-                                <!-- Audio Preview for New Upload -->
                                 <div class="mt-3" id="audioPreviewContainer" style="display:none;">
                                     <label for="audioPreview" class="form-label">Audio Preview</label>
                                     <br>
@@ -119,40 +114,26 @@
                                     </audio>
                                 </div>
                             </div>
-
                             <script>
-                                // Preview audio when a new file is selected
                                 document.getElementById('audio').addEventListener('change', function(event) {
                                     var audioFile = event.target.files[0];
-
                                     if (audioFile) {
-                                        // Show audio preview container
                                         var audioPreviewContainer = document.getElementById('audioPreviewContainer');
                                         var audioSource = document.getElementById('audioSource');
                                         var audioPreview = document.getElementById('audioPreview');
-
-                                        // Create an object URL for the selected file and update the source
                                         var objectURL = URL.createObjectURL(audioFile);
                                         audioSource.src = objectURL;
-
-                                        // Display the audio preview
                                         audioPreviewContainer.style.display = 'block';
-
-                                        // Reload the audio element to reflect the new file
                                         audioPreview.load();
                                     }
                                 });
-
-                                // Handle checkbox to remove the existing audio
                                 document.getElementById('delete_audio').addEventListener('change', function(event) {
                                     var audioPlayer = document.getElementById('audioPlayer');
                                     if (event.target.checked) {
-                                        // Pause the audio player if removing audio
                                         audioPlayer.pause();
                                     }
                                 });
                             </script>
-
                             <button class="btn btn-primary mt-2">Edit</button>
                         </form>
                     </div>

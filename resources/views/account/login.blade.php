@@ -55,9 +55,7 @@
                                     <br>
                                     <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-center">
                                         <a href="{{ route('account.register') }}"
-                                            class="link-secondary text-decoration-none">Create
-                                            new
-                                            account</a>
+                                            class="link-secondary text-decoration-none">Create new account</a>
                                     </div>
                                 </div>
                             </div>

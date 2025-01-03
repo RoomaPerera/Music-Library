@@ -16,10 +16,9 @@ class HomeController extends Controller
             if(!empty($request->keyword)){
                 $songs->where('title','like', '%'.$request->keyword.'%');
             }
-
             $songs=$songs->paginate(8);
         } else {
-            $songs = []; // Or handle the "no songs" case appropriately
+            $songs = [];
         }
         return view('home', [
             'songs' => $songs

@@ -33,7 +33,7 @@
                                 <div class="card border-0 shadow-lg">
                                     <a href="detail.html">
                                         @if ($song->image != '')
-                                            <img src="{{ asset('uploads/songs/thumb/' . $song->image) }}" alt=""
+                                            <img src="{{ asset('uploads/songs/' . $song->image) }}" alt=""
                                                 class="card-img-top">
                                         @else
                                             <img src="https://placehold.co/600x400?text=No Image" alt=""
@@ -43,21 +43,6 @@
                                     <div class="card-body">
                                         <h3 class="h4 heading">{{ $song->title }}</h3>
                                         <p>by {{ $song->artist }}</p>
-                                        <div class="star-rating d-inline-flex ml-2" title="">
-                                            <span class="rating-text theme-font theme-yellow">0.0</span>
-                                            <div class="star-rating d-inline-flex mx-2" title="">
-                                                <div class="back-stars ">
-                                                    <i class="fa fa-star " aria-hidden="true"></i>
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                                    <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                </div>
-                                            </div>
-                                            <span class="theme-font text-muted">(0 Likes)</span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

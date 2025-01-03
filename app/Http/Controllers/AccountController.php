@@ -71,7 +71,6 @@ class AccountController extends Controller
 
     // will update user profile
     public function updateProfile(Request $request){
-
         $rules = [
             'name' => 'required|min:5',
             'email' => 'required|email|unique:users,email,'.Auth::user()->id.',id',
@@ -100,7 +99,6 @@ class AccountController extends Controller
             $ext = $image->getClientOriginalExtension();
             $imageName = time().'.'.$ext;
             $image->move(public_path('uploads/profile'),$imageName);
-
             $user->image = $imageName;
             $user->save();
         }
